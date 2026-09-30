@@ -459,3 +459,39 @@ footer{
     top:0%;
   }
 }
+.security-badge{
+  position:absolute;
+  top:18px;
+  right:18px;
+  padding:9px 13px;
+  border:1px solid #55e8ff55;
+  border-radius:999px;
+  background:#020611dd;
+  backdrop-filter:blur(10px);
+  color:#8ff3ff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:1px;
+  box-shadow:0 0 20px #00e5ff20;
+  z-index:3;
+}
+
+.security-badge span{
+  color:#6dffb2;
+  text-shadow:0 0 10px #6dffb2;
+  margin-right:5px;
+}
+
+.security-label{
+  position:absolute;
+  bottom:18px;
+  left:18px;
+  padding:8px 12px;
+  border-left:2px solid #55e8ff;
+  background:#020611dd;
+  color:#bcefff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:2px;
+  z-index:3;
+}
