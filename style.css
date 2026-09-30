@@ -428,3 +428,34 @@ footer{
   transform:scale(1.04);
   filter:brightness(1.08);
 }
+.hero-image{
+  position:relative;
+}
+
+.hero-image:after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-10%;
+  height:2px;
+  background:#55e8ff;
+  box-shadow:0 0 15px #00e5ff;
+  opacity:.7;
+  animation:scan 4s linear infinite;
+  pointer-events:none;
+}
+
+@keyframes scan{
+  0%{
+    top:0%;
+  }
+
+  50%{
+    top:100%;
+  }
+
+  100%{
+    top:0%;
+  }
+}
