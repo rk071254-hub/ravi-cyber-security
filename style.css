@@ -1998,3 +1998,31 @@ footer{
     0 0 80px rgba(139,92,246,.22),
     0 0 160px rgba(139,92,246,.10);
 }
+/* ===== MOUSE CYBER GLOW ===== */
+
+.cyber-wallpaper{
+  --mouse-x:50%;
+  --mouse-y:50%;
+}
+
+.cyber-wallpaper{
+  background:
+    radial-gradient(
+      circle at var(--mouse-x) var(--mouse-y),
+      rgba(0,229,255,.14),
+      transparent 22%
+    ),
+    linear-gradient(#00e5ff08 1px, transparent 1px),
+    linear-gradient(90deg,#00e5ff08 1px,transparent 1px),
+    radial-gradient(circle at 15% 20%,rgba(0,229,255,.18),transparent 30%),
+    radial-gradient(circle at 85% 25%,rgba(139,92,246,.16),transparent 32%),
+    #02050a;
+
+  background-size:
+    auto,
+    45px 45px,
+    45px 45px,
+    auto,
+    auto,
+    auto;
+}
