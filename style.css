@@ -1831,3 +1831,107 @@ body::after{
     background-position:70px 70px;
   }
 }
+/* ===== PREMIUM CYBER WALLPAPER ===== */
+
+.cyber-wallpaper{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(0,229,255,.18),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(139,92,246,.16),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 55% 85%,
+      rgba(0,255,157,.12),
+      transparent 30%
+    ),
+    #02050a;
+}
+
+.cyber-wallpaper::before{
+  content:"";
+  position:absolute;
+  width:55vw;
+  height:55vw;
+  left:-15%;
+  top:-15%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,229,255,.28),
+      transparent 65%
+    );
+
+  filter:blur(70px);
+
+  animation:cyberMove 9s ease-in-out infinite alternate;
+}
+
+.cyber-wallpaper::after{
+  content:"";
+  position:absolute;
+  width:50vw;
+  height:50vw;
+  right:-15%;
+  bottom:-15%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(139,92,246,.25),
+      transparent 65%
+    );
+
+  filter:blur(75px);
+
+  animation:cyberMove2 11s ease-in-out infinite alternate;
+}
+
+@keyframes cyberMove{
+  0%{
+    transform:translate(0,0) scale(1);
+  }
+
+  50%{
+    transform:translate(35%,20%) scale(1.2);
+  }
+
+  100%{
+    transform:translate(10%,45%) scale(1.05);
+  }
+}
+
+@keyframes cyberMove2{
+  0%{
+    transform:translate(0,0) scale(1);
+  }
+
+  50%{
+    transform:translate(-30%,-20%) scale(1.15);
+  }
+
+  100%{
+    transform:translate(-10%,-40%) scale(1.05);
+  }
+}
+
+/* Keep website content above wallpaper */
+
+.nav,
+main,
+footer{
+  position:relative;
+  z-index:1;
+}
