@@ -547,3 +547,27 @@ footer{
 .service-card:hover .card-link{
   letter-spacing:.5px;
 }
+.eyebrow{
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:5px;
+  color:#69edff;
+  text-shadow:
+    0 0 8px #00e5ff,
+    0 0 22px #00e5ff55;
+  position:relative;
+  display:inline-block;
+  padding:7px 14px;
+  border-left:2px solid #55e8ff;
+  border-right:2px solid #55e8ff;
+  background:#00e5ff08;
+  box-shadow:
+    0 0 20px #00e5ff0d,
+    inset 0 0 15px #00e5ff08;
+}
+
+.hero .eyebrow{
+  font-size:17px;
+  letter-spacing:6px;
+  margin-bottom:8px;
+}
