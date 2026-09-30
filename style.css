@@ -1470,3 +1470,108 @@ body:after{
     opacity:.7;
   }
 }
+/* ===== FULL CYBER TERMINAL WALLPAPER ===== */
+
+body{
+  position:relative;
+  background:#010609;
+}
+
+/* Hacker wallpaper layer */
+
+body:after{
+  content:
+    "root@security:~$ ./defense_scan"
+    "\A [OK] firewall ........ ACTIVE"
+    "\A [OK] authentication .. SECURE"
+    "\A [OK] monitoring ....... RUNNING"
+    "\A [INFO] authorized_mode = TRUE"
+    "\A [SCAN] checking network..."
+    "\A [OK] threats .......... 0"
+    "\A root@security:~$ _";
+
+  white-space:pre;
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  pointer-events:none;
+
+  padding:100px 6%;
+  font-family:"Courier New",monospace;
+  font-size:14px;
+  line-height:2.2;
+
+  color:#00ff9d;
+  opacity:.055;
+
+  background:
+    radial-gradient(
+      circle at 50% 40%,
+      #00e5ff12,
+      transparent 45%
+    ),
+    #010609;
+
+  text-shadow:
+    0 0 8px #00ff9d;
+
+  overflow:hidden;
+}
+
+/* Digital grid wallpaper */
+
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+
+  background-image:
+    linear-gradient(#00e5ff09 1px,transparent 1px),
+    linear-gradient(90deg,#00e5ff09 1px,transparent 1px);
+
+  background-size:45px 45px;
+
+  mask-image:
+    radial-gradient(
+      ellipse at center,
+      #000 20%,
+      transparent 85%
+    );
+
+  animation:gridMove 12s linear infinite;
+}
+
+@keyframes gridMove{
+  from{
+    background-position:0 0,0 0;
+  }
+
+  to{
+    background-position:45px 45px,45px 45px;
+  }
+}
+
+/* Moving terminal scan */
+
+body:after{
+  animation:terminalGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes terminalGlow{
+  0%{
+    opacity:.035;
+    transform:translateY(0);
+  }
+
+  50%{
+    opacity:.07;
+    transform:translateY(-12px);
+  }
+
+  100%{
+    opacity:.045;
+    transform:translateY(8px);
+  }
+}
