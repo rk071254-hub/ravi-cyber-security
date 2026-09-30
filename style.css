@@ -1298,3 +1298,31 @@ footer{
 #apply select{
   color:#071018;
 }
+/* ===== ABOUT TEXT - CYBER GLOW ===== */
+
+#about .split > div:nth-child(2) > p{
+  font-family:"Courier New",monospace;
+  font-size:17px;
+  line-height:1.9;
+  color:#d8f7ff;
+  text-shadow:
+    0 0 8px #00e5ff35,
+    0 0 20px #00e5ff15;
+}
+
+#about .split > div:nth-child(2) > p:first-of-type{
+  color:#9ff3ff;
+}
+
+#about .split > div:nth-child(2) .note{
+  font-size:16px;
+  font-weight:700;
+  color:#ffd6f4;
+  text-shadow:
+    0 0 8px #ff61c755,
+    0 0 20px #ff61c722;
+  border-left:3px solid #ff61c7;
+  padding:18px 20px;
+  margin-top:25px;
+  background:#ff61c708;
+}
