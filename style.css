@@ -1575,3 +1575,107 @@ body:after{
     transform:translateY(8px);
   }
 }
+/* ===== CYBER TERMINAL WALLPAPER v2 ===== */
+
+body{
+  background:#01050a !important;
+}
+
+/* Full-screen terminal wallpaper */
+body::after{
+  content:
+    "┌──[ RAVI-CYBER-SECURITY ]──────────────┐\A"
+    "│ root@security:~$ system_check           │\A"
+    "│ [OK] firewall ............... ACTIVE     │\A"
+    "│ [OK] encryption ............ ENABLED    │\A"
+    "│ [OK] authentication ........ SECURE     │\A"
+    "│ [OK] monitoring ............ RUNNING    │\A"
+    "│ [SCAN] network analysis ...........     │\A"
+    "│ [SCAN] access controls ............     │\A"
+    "│ [SCAN] security headers ...........     │\A"
+    "│ [OK] authorized_mode ........... TRUE   │\A"
+    "│                                          │\A"
+    "│ root@security:~$ ./defense_protocol     │\A"
+    "│ [██████████████████████████████] 100%   │\A"
+    "│                                          │\A"
+    "│ SYSTEM STATUS: ONLINE                    │\A"
+    "└──────────────────────────────────────────┘";
+
+  position:fixed;
+  inset:0;
+
+  z-index:-10;
+  pointer-events:none;
+
+  padding:110px 8%;
+  box-sizing:border-box;
+
+  white-space:pre;
+  overflow:hidden;
+
+  font-family:"Courier New",monospace;
+  font-size:16px;
+  line-height:2;
+
+  color:#00ff9d;
+
+  opacity:.13;
+
+  text-shadow:
+    0 0 8px #00ff9d,
+    0 0 20px #00ff9d55;
+
+  background:
+    radial-gradient(
+      circle at 50% 50%,
+      #00e5ff12,
+      transparent 55%
+    );
+
+  animation:terminalWallpaper 5s ease-in-out infinite alternate;
+}
+
+@keyframes terminalWallpaper{
+  from{
+    opacity:.08;
+    transform:translateY(8px);
+  }
+
+  to{
+    opacity:.15;
+    transform:translateY(-8px);
+  }
+}
+
+
+/* Digital grid over wallpaper */
+
+body::before{
+  content:"";
+
+  position:fixed;
+  inset:0;
+
+  z-index:-9;
+  pointer-events:none;
+
+  background-image:
+    linear-gradient(#00e5ff12 1px,transparent 1px),
+    linear-gradient(90deg,#00e5ff12 1px,transparent 1px);
+
+  background-size:40px 40px;
+
+  opacity:.45;
+
+  animation:gridMove 10s linear infinite;
+}
+
+@keyframes gridMove{
+  from{
+    background-position:0 0;
+  }
+
+  to{
+    background-position:40px 40px;
+  }
+}
