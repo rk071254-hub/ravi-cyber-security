@@ -726,3 +726,153 @@ footer{
     opacity:0;
   }
 }
+/* ===== UNIQUE CYBER SECURITY CARDS ===== */
+
+.service-card{
+  position:relative;
+  overflow:hidden;
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+/* Card 01 — Website Security */
+.service-card:nth-child(1){
+  border-color:#00e5ff45;
+  background:
+    linear-gradient(145deg,#00e5ff12,#020611 65%);
+}
+
+.service-card:nth-child(1):before{
+  content:"01 // WEB_SCAN";
+  position:absolute;
+  top:14px;
+  right:16px;
+  color:#55e8ff;
+  font:700 9px "Courier New",monospace;
+  letter-spacing:1px;
+}
+
+.service-card:nth-child(1) b{
+  color:#55e8ff;
+  text-shadow:0 0 18px #00e5ff;
+}
+
+
+/* Card 02 — Security Assessment */
+.service-card:nth-child(2){
+  border-color:#9c7cff55;
+  background:
+    linear-gradient(145deg,#8b5cf612,#020611 65%);
+}
+
+.service-card:nth-child(2):before{
+  content:"02 // SYSTEM_AUDIT";
+  position:absolute;
+  top:14px;
+  right:16px;
+  color:#b89cff;
+  font:700 9px "Courier New",monospace;
+  letter-spacing:1px;
+}
+
+.service-card:nth-child(2) b{
+  color:#b89cff;
+  text-shadow:0 0 18px #8b5cf6;
+}
+
+
+/* Card 03 — Incident Guidance */
+.service-card:nth-child(3){
+  border-color:#ff61c755;
+  background:
+    linear-gradient(145deg,#ff61c712,#020611 65%);
+}
+
+.service-card:nth-child(3):before{
+  content:"03 // INCIDENT_ALERT";
+  position:absolute;
+  top:14px;
+  right:16px;
+  color:#ff8bd9;
+  font:700 9px "Courier New",monospace;
+  letter-spacing:1px;
+}
+
+.service-card:nth-child(3) b{
+  color:#ff8bd9;
+  text-shadow:0 0 18px #ff61c7;
+}
+
+
+/* Card 04 — Security Awareness */
+.service-card:nth-child(4){
+  border-color:#6dffb255;
+  background:
+    linear-gradient(145deg,#6dffb210,#020611 65%);
+}
+
+.service-card:nth-child(4):before{
+  content:"04 // DEFENSE_MODE";
+  position:absolute;
+  top:14px;
+  right:16px;
+  color:#6dffb2;
+  font:700 9px "Courier New",monospace;
+  letter-spacing:1px;
+}
+
+.service-card:nth-child(4) b{
+  color:#6dffb2;
+  text-shadow:0 0 18px #6dffb2;
+}
+
+
+/* Unique hover glow */
+
+.service-card:nth-child(1):hover{
+  box-shadow:0 0 35px #00e5ff25;
+}
+
+.service-card:nth-child(2):hover{
+  box-shadow:0 0 35px #8b5cf625;
+}
+
+.service-card:nth-child(3):hover{
+  box-shadow:0 0 35px #ff61c725;
+}
+
+.service-card:nth-child(4):hover{
+  box-shadow:0 0 35px #6dffb225;
+}
+
+
+/* Terminal-style bottom line */
+
+.service-card:after{
+  content:"";
+  position:absolute;
+  left:18px;
+  right:18px;
+  bottom:14px;
+  height:1px;
+  opacity:.35;
+}
+
+.service-card:nth-child(1):after{
+  background:#00e5ff;
+  box-shadow:0 0 10px #00e5ff;
+}
+
+.service-card:nth-child(2):after{
+  background:#9c7cff;
+  box-shadow:0 0 10px #9c7cff;
+}
+
+.service-card:nth-child(3):after{
+  background:#ff61c7;
+  box-shadow:0 0 10px #ff61c7;
+}
+
+.service-card:nth-child(4):after{
+  background:#6dffb2;
+  box-shadow:0 0 10px #6dffb2;
+}
