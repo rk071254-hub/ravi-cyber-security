@@ -1278,3 +1278,23 @@ footer{
 #apply form textarea{
   font-size:16px;
 }
+/* ===== LIGHT FORM INPUT BACKGROUND ===== */
+
+#apply input,
+#apply select,
+#apply textarea{
+  background:#f4fbff;
+  color:#071018;
+  border:1px solid #55e8ff;
+  box-shadow:0 0 15px #00e5ff12;
+}
+
+#apply input::placeholder,
+#apply textarea::placeholder{
+  color:#526675;
+  opacity:1;
+}
+
+#apply select{
+  color:#071018;
+}
