@@ -159,3 +159,18 @@ document.querySelectorAll(".service-card").forEach(function (card) {
     });
   });
 });
+/* ===== CYBER MOUSE GLOW ===== */
+
+const cyberWallpaper = document.querySelector(".cyber-wallpaper");
+
+if (cyberWallpaper) {
+  document.addEventListener("mousemove", function (e) {
+
+    const x = (e.clientX / window.innerWidth) * 100;
+    const y = (e.clientY / window.innerHeight) * 100;
+
+    cyberWallpaper.style.setProperty("--mouse-x", x + "%");
+    cyberWallpaper.style.setProperty("--mouse-y", y + "%");
+
+  });
+}
