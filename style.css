@@ -1076,3 +1076,143 @@ footer{
     0 15px 45px #00e5ff12,
     inset 0 0 30px #00e5ff08;
 }
+/* ===== APPLY FOR HELP // CYBER CONSOLE ===== */
+
+#apply{
+  position:relative;
+  overflow:hidden;
+  border-top:1px solid #00e5ff18;
+  border-bottom:1px solid #00e5ff18;
+  background:
+    radial-gradient(circle at 15% 50%,#00e5ff0b,transparent 35%),
+    radial-gradient(circle at 85% 30%,#8b5cf608,transparent 35%);
+}
+
+/* Terminal header */
+
+#apply:before{
+  content:"SECURE_CHANNEL // REQUEST_ACCESS";
+  position:absolute;
+  top:28px;
+  right:7%;
+  color:#55e8ff;
+  font:700 10px "Courier New",monospace;
+  letter-spacing:2px;
+  text-shadow:0 0 12px #00e5ff;
+}
+
+/* Main heading */
+
+#apply h2{
+  font-family:"Courier New",monospace;
+  font-size:clamp(38px,4vw,56px);
+  background:linear-gradient(
+    90deg,
+    #55e8ff,
+    #ffffff,
+    #9c7cff,
+    #ff61c7
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+
+  text-shadow:0 0 25px #00e5ff20;
+}
+
+/* Terminal-style description */
+
+#apply > div > p:not(.eyebrow){
+  max-width:560px;
+  padding:18px 20px;
+  border-left:2px solid #55e8ff;
+  background:#00e5ff06;
+  color:#a9c9da;
+  font-family:"Courier New",monospace;
+  font-size:14px;
+  box-shadow:inset 0 0 25px #00e5ff05;
+}
+
+#apply > div > p:not(.eyebrow):before{
+  content:"> ";
+  color:#6dffb2;
+  font-weight:900;
+  text-shadow:0 0 10px #6dffb2;
+}
+
+
+/* ===== SECURE REQUEST FORM ===== */
+
+#apply form{
+  position:relative;
+  border:1px solid #00e5ff35;
+  background:
+    linear-gradient(145deg,#00e5ff08,#020611e8);
+  box-shadow:
+    0 0 45px #00e5ff0d,
+    inset 0 0 35px #00e5ff05;
+}
+
+/* Form terminal header */
+
+#apply form:before{
+  content:"● ● ●    SECURE_REQUEST_FORM";
+  display:block;
+  padding-bottom:15px;
+  margin-bottom:4px;
+  border-bottom:1px solid #ffffff12;
+  color:#55e8ff;
+  font:700 11px "Courier New",monospace;
+  letter-spacing:1px;
+  text-shadow:0 0 10px #00e5ff;
+}
+
+
+/* Input labels */
+
+#apply label{
+  font-family:"Courier New",monospace;
+  color:#8fdfff;
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+
+/* Cyber inputs */
+
+#apply input,
+#apply select,
+#apply textarea{
+  border-color:#00e5ff20;
+  background:#01040a;
+  font-family:"Courier New",monospace;
+  color:#dffaff;
+  transition:.25s ease;
+}
+
+#apply input:focus,
+#apply select:focus,
+#apply textarea:focus{
+  border-color:#00e5ff;
+  box-shadow:
+    0 0 15px #00e5ff20,
+    inset 0 0 15px #00e5ff08;
+  transform:translateX(3px);
+}
+
+
+/* Send button */
+
+#apply button{
+  font-family:"Courier New",monospace;
+  letter-spacing:1px;
+  text-transform:uppercase;
+}
+
+#apply button:after{
+  content:"  // TRANSMIT";
+  font-size:10px;
+  opacity:.7;
+}
