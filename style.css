@@ -1216,3 +1216,42 @@ footer{
   font-size:10px;
   opacity:.7;
 }
+/* ===== BIGGER SECURE REQUEST FORM ===== */
+
+#apply{
+  grid-template-columns:.7fr 1.3fr;
+  gap:70px;
+}
+
+#apply form{
+  padding:38px;
+  min-height:560px;
+}
+
+#apply label{
+  gap:9px;
+  font-size:12px;
+}
+
+#apply input,
+#apply select,
+#apply textarea{
+  padding:16px 17px;
+  font-size:15px;
+  border-radius:11px;
+}
+
+#apply textarea{
+  min-height:150px;
+}
+
+#apply button{
+  padding:15px 24px;
+  font-size:14px;
+}
+
+/* More breathing space between fields */
+
+#apply form{
+  gap:20px;
+}
