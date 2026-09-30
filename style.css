@@ -495,3 +495,55 @@ footer{
   letter-spacing:2px;
   z-index:3;
 }
+.service-card{
+  position:relative;
+  isolation:isolate;
+}
+
+.service-card:after{
+  content:"";
+  position:absolute;
+  inset:1px;
+  border-radius:17px;
+  background:linear-gradient(
+    135deg,
+    #00e5ff08,
+    transparent 45%,
+    #8b5cf608
+  );
+  opacity:0;
+  transition:opacity .3s ease;
+  pointer-events:none;
+  z-index:-1;
+}
+
+.service-card:hover:after{
+  opacity:1;
+}
+
+.service-card b{
+  transition:transform .3s ease, text-shadow .3s ease;
+}
+
+.service-card:hover b{
+  transform:scale(1.15);
+  text-shadow:
+    0 0 10px #00e5ff,
+    0 0 25px #00e5ff88;
+}
+
+.service-card h3{
+  transition:color .3s ease;
+}
+
+.service-card:hover h3{
+  color:#7cefff;
+}
+
+.card-link{
+  transition:letter-spacing .3s ease;
+}
+
+.service-card:hover .card-link{
+  letter-spacing:.5px;
+}
