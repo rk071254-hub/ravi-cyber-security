@@ -1255,3 +1255,26 @@ footer{
 #apply form{
   gap:20px;
 }
+/* ===== BIG FORM LABELS ===== */
+
+#apply form label{
+  font-family:"Courier New",monospace;
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:1.5px;
+  color:#8ff3ff;
+  text-transform:uppercase;
+  text-shadow:
+    0 0 8px #00e5ff55,
+    0 0 18px #00e5ff22;
+}
+
+#apply form label::first-letter{
+  color:#55e8ff;
+}
+
+#apply form input,
+#apply form select,
+#apply form textarea{
+  font-size:16px;
+}
