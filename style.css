@@ -876,3 +876,94 @@ footer{
   background:#6dffb2;
   box-shadow:0 0 10px #6dffb2;
 }
+/* ===== CYBER SCAN EFFECT ===== */
+
+.service-card{
+  transform-style:preserve-3d;
+}
+
+/* Moving scan line */
+.service-card:before{
+  transition:opacity .3s ease;
+}
+
+.service-card:hover:before{
+  animation:cardScan 1.4s linear infinite;
+}
+
+@keyframes cardScan{
+  0%{
+    transform:translateY(-8px);
+    opacity:.4;
+  }
+
+  50%{
+    transform:translateY(135px);
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(270px);
+    opacity:.2;
+  }
+}
+
+
+/* Digital corner markers */
+
+.service-card{
+  --scan:#00e5ff;
+}
+
+.service-card:nth-child(1){
+  --scan:#00e5ff;
+}
+
+.service-card:nth-child(2){
+  --scan:#9c7cff;
+}
+
+.service-card:nth-child(3){
+  --scan:#ff61c7;
+}
+
+.service-card:nth-child(4){
+  --scan:#6dffb2;
+}
+
+.service-card:hover{
+  border-color:var(--scan);
+  box-shadow:
+    0 10px 35px color-mix(in srgb,var(--scan) 20%,transparent),
+    inset 0 0 25px color-mix(in srgb,var(--scan) 5%,transparent);
+  transform:translateY(-9px) scale(1.015);
+}
+
+
+/* Cyber text glow */
+
+.service-card:hover h3{
+  color:var(--scan);
+  text-shadow:
+    0 0 8px var(--scan),
+    0 0 20px color-mix(in srgb,var(--scan) 45%,transparent);
+}
+
+
+/* Icon pulse */
+
+.service-card:hover b{
+  animation:iconPulse .8s ease-in-out infinite alternate;
+}
+
+@keyframes iconPulse{
+  from{
+    transform:scale(1);
+    filter:brightness(1);
+  }
+
+  to{
+    transform:scale(1.12);
+    filter:brightness(1.4);
+  }
+}
