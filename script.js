@@ -6,7 +6,6 @@ e.preventDefault();
 
 ```
 const button = form.querySelector("button");
-
 button.disabled = true;
 button.textContent = "Sending...";
 
@@ -35,12 +34,10 @@ try {
   }
 
   alert("Your request has been sent successfully!");
-
   form.reset();
 
 } catch (error) {
   console.error("Contact form error:", error);
-
   alert("Unable to send request. Please try again.");
 
 } finally {
@@ -54,31 +51,27 @@ try {
 
 // Smooth scrolling
 
-document.querySelectorAll('a[href^="#"]').forEach((a) => {
-
-a.addEventListener("click", (e) => {
+document.querySelectorAll('a[href^="#"]').forEach((link) => {
+link.addEventListener("click", (e) => {
+const target = link.getAttribute("href");
+const element = document.querySelector(target);
 
 ```
-const target = a.getAttribute("href");
-const el = document.querySelector(target);
-
-if (el) {
+if (element) {
   e.preventDefault();
 
-  el.scrollIntoView({
+  element.scrollIntoView({
     behavior: "smooth"
   });
 }
 ```
 
 });
-
 });
 
 // Service awareness content
 
 const serviceContent = {
-
 website: {
 title: "Website Security",
 content: ` <h3>Why does website security matter?</h3>
@@ -164,8 +157,8 @@ content: ` <h3>What is incident guidance?</h3>
   </ul>
 
   <div class="info-note">
-    If an account may be compromised, avoid sharing passwords, OTPs,
-    recovery codes or private keys with anyone providing assistance.
+    Never share passwords, OTPs, recovery codes or private keys with
+    anyone providing assistance.
   </div>
 `
 ```
@@ -178,10 +171,9 @@ content: ` <h3>Why is security awareness important?</h3>
 
 ```
   <p>
-    Many security incidents begin with simple mistakes such as clicking
-    a suspicious link, reusing passwords or sharing sensitive information.
-    Security awareness helps people recognize these risks before they
-    become serious problems.
+    Security awareness helps people recognize common risks such as
+    phishing, unsafe links, reused passwords and suspicious login
+    requests.
   </p>
 
   <h3>Good security habits include:</h3>
@@ -203,24 +195,28 @@ content: ` <h3>Why is security awareness important?</h3>
 ```
 
 }
-
 };
 
 // Service card click handling
 
 document.querySelectorAll(".service-card").forEach((card) => {
-
 card.addEventListener("click", () => {
 
 ```
 const serviceKey = card.dataset.info;
 const service = serviceContent[serviceKey];
 
-if (!service) return;
+if (!service) {
+  return;
+}
 
 const infoSection = document.querySelector("#service-info");
 const title = document.querySelector("#info-title");
 const content = document.querySelector("#info-content");
+
+if (!infoSection || !title || !content) {
+  return;
+}
 
 title.textContent = service.title;
 content.innerHTML = service.content;
@@ -234,6 +230,6 @@ infoSection.scrollIntoView({
 ```
 
 });
-
 });
+
 
