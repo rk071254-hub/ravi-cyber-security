@@ -967,3 +967,112 @@ footer{
     filter:brightness(1.4);
   }
 }
+/* ===== CYBER ABOUT COMMAND CENTER ===== */
+
+#about{
+  position:relative;
+  overflow:hidden;
+  border-top:1px solid #00e5ff18;
+  border-bottom:1px solid #00e5ff18;
+  background:
+    linear-gradient(135deg,#00e5ff06,#8b5cf606,transparent);
+}
+
+/* Terminal frame */
+
+#about:before{
+  content:"SECURITY_CORE // ABOUT_SYSTEM";
+  position:absolute;
+  top:22px;
+  right:7%;
+  color:#55e8ff;
+  font:700 10px "Courier New",monospace;
+  letter-spacing:2px;
+  text-shadow:0 0 10px #00e5ff;
+}
+
+/* Left heading */
+
+#about h2{
+  font-family:"Courier New",monospace;
+  background:linear-gradient(
+    90deg,
+    #55e8ff,
+    #ffffff,
+    #9c7cff
+  );
+
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+
+  text-shadow:0 0 25px #00e5ff20;
+}
+
+/* About text panel */
+
+#about .split{
+  position:relative;
+}
+
+#about .split > div:nth-child(2){
+  position:relative;
+  padding:28px;
+  border:1px solid #00e5ff25;
+  border-radius:16px;
+  background:#020611c9;
+  box-shadow:
+    0 0 35px #00e5ff0b,
+    inset 0 0 25px #00e5ff05;
+}
+
+/* Terminal prompt */
+
+#about .split > div:nth-child(2):before{
+  content:"> system.status";
+  display:block;
+  margin-bottom:18px;
+  color:#6dffb2;
+  font:700 12px "Courier New",monospace;
+  letter-spacing:1px;
+  text-shadow:0 0 10px #6dffb2;
+}
+
+/* Text glow */
+
+#about .split > div:nth-child(2) p:first-of-type{
+  color:#bcefff;
+}
+
+/* Security warning */
+
+#about .note{
+  border-left-color:#ff61c7;
+  background:#ff61c708;
+  box-shadow:inset 0 0 20px #ff61c706;
+}
+
+/* Small status line */
+
+#about .note:before{
+  content:"[SECURITY_PROTOCOL]";
+  display:block;
+  margin-bottom:6px;
+  color:#ff8bd9;
+  font:700 10px "Courier New",monospace;
+  letter-spacing:1px;
+}
+
+/* Hover panel */
+
+#about .split > div:nth-child(2){
+  transition:.3s ease;
+}
+
+#about .split > div:nth-child(2):hover{
+  transform:translateY(-5px);
+  border-color:#00e5ff55;
+  box-shadow:
+    0 15px 45px #00e5ff12,
+    inset 0 0 30px #00e5ff08;
+}
