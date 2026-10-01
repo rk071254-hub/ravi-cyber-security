@@ -545,7 +545,17 @@ footer{
 }
 
 .service-card:hover .card-link{
-  letter-spacing:.5px;
+  letter-spacing:.5px; 
+.service-card::before,
+.service-card::after{
+  pointer-events:none;
+}
+
+.service-card .card-link{
+  position:relative;
+  z-index:10;
+  pointer-events:auto;
+  cursor:pointer;
 }
 .eyebrow{
   font-size:15px;
