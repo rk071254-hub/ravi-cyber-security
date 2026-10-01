@@ -2106,3 +2106,34 @@ footer{
     min-width: 120px;
   }
 }
+```css
+/* ===== SOCIAL ICONS ===== */
+
+.social {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  padding: 0;
+}
+
+.social svg {
+  width: 25px;
+  height: 25px;
+  fill: currentColor;
+}
+
+.instagram svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.instagram svg circle:last-child {
+  fill: currentColor;
+  stroke: none;
+}
+
+.social:hover {
+  transform: translateY(-4px) scale(1.08);
+}
+```
