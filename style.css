@@ -2026,3 +2026,83 @@ footer{
     auto,
     auto;
 }
+/* ===== SOCIAL MEDIA BUTTONS ===== */
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.social:hover {
+  transform: translateY(-4px) scale(1.04);
+}
+
+.whatsapp {
+  color: #25D366;
+  border-color: #25D366;
+  box-shadow: 0 0 15px rgba(37,211,102,0.35);
+}
+
+.whatsapp:hover {
+  background: #25D366;
+  color: #06110a;
+  box-shadow: 0 0 25px rgba(37,211,102,0.7);
+}
+
+.instagram {
+  color: #ff4fd8;
+  border-color: #ff4fd8;
+  box-shadow: 0 0 15px rgba(255,79,216,0.35);
+}
+
+.instagram:hover {
+  background: #ff4fd8;
+  color: #12050f;
+  box-shadow: 0 0 25px rgba(255,79,216,0.7);
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .social-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .social {
+    min-width: 120px;
+  }
+}
