@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06111f"/>
+      <stop offset="1" stop-color="#02040a"/>
+    </linearGradient>
+
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00f0ff"/>
+      <stop offset="0.5" stop-color="#168cff"/>
+      <stop offset="1" stop-color="#7b2cff"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+
+  <!-- 3D shadow -->
+  <path d="M64 15 106 36v28c0 27-17 47-42 59-25-12-42-32-42-59V36Z"
+        fill="#071a35"
+        stroke="#092b52"
+        stroke-width="5"/>
+
+  <!-- Main shield -->
+  <path d="M64 10 101 29v31c0 24-15 42-37 53C42 102 27 84 27 60V29Z"
+        fill="url(#shield)"
+        filter="url(#glow)"/>
+
+  <!-- Inner shield -->
+  <path d="M64 22 90 35v25c0 17-10 31-26 40-16-9-26-23-26-40V35Z"
+        fill="#050b16"/>
+
+  <!-- Lock -->
+  <rect x="44" y="57" width="40" height="31" rx="6"
+        fill="url(#shield)"
+        filter="url(#glow)"/>
+
+  <path d="M52 58v-8c0-7 5-13 12-13s12 6 12 13v8"
+        fill="none"
+        stroke="#00f0ff"
+        stroke-width="7"
+        stroke-linecap="round"/>
+
+  <circle cx="64" cy="70" r="4" fill="#050b16"/>
+  <path d="M64 74v7"
+        stroke="#050b16"
+        stroke-width="4"
+        stroke-linecap="round"/>
+
+  <!-- Cyber circuit details -->
+  <path d="M27 43H15v-7M101 43h12v-7M27 78H15v7M101 78h12v-7"
+        fill="none"
+        stroke="#00f0ff"
+        stroke-width="3"
+        stroke-linecap="round"/>
+
+  <circle cx="15" cy="36" r="3" fill="#00f0ff"/>
+  <circle cx="113" cy="36" r="3" fill="#7b2cff"/>
+  <circle cx="15" cy="85" r="3" fill="#7b2cff"/>
+  <circle cx="113" cy="71" r="3" fill="#00f0ff"/>
+</svg>
