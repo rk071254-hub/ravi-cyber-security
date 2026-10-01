@@ -1,3 +1,4 @@
+```javascript
 const form = document.querySelector("#helpForm");
 
 if (form) {
@@ -47,8 +48,12 @@ if (form) {
 }
 
 
+/* ===== SMOOTH SCROLL ===== */
+
 document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+
   link.addEventListener("click", function (e) {
+
     const target = link.getAttribute("href");
     const element = document.querySelector(target);
 
@@ -59,11 +64,16 @@ document.querySelectorAll('a[href^="#"]').forEach(function (link) {
         behavior: "smooth"
       });
     }
+
   });
+
 });
 
 
+/* ===== SERVICE INFORMATION ===== */
+
 const serviceContent = {
+
   website: {
     title: "Website Security",
     content:
@@ -79,6 +89,7 @@ const serviceContent = {
       "</ul>" +
       "<div class='info-note'>Security testing should always be performed with authorization from the website or system owner.</div>"
   },
+
 
   assessment: {
     title: "Security Assessment",
@@ -96,6 +107,7 @@ const serviceContent = {
       "<div class='info-note'>Assessments should only be conducted on systems where permission has been provided.</div>"
   },
 
+
   incident: {
     title: "Incident Guidance",
     content:
@@ -112,6 +124,7 @@ const serviceContent = {
       "<div class='info-note'>Never share passwords, OTPs or recovery codes with anyone providing assistance.</div>"
   },
 
+
   awareness: {
     title: "Security Awareness",
     content:
@@ -126,27 +139,144 @@ const serviceContent = {
       "<li>Never share OTPs or recovery codes.</li>" +
       "</ul>" +
       "<div class='info-note'>Good security awareness can reduce common security risks.</div>"
+  },
+
+
+  network: {
+    title: "Network Security",
+    content:
+      "<h3>What is network security?</h3>" +
+      "<p>Network security focuses on protecting connected systems and communications from common security risks.</p>" +
+      "<h3>What can be reviewed?</h3>" +
+      "<ul>" +
+      "<li>Network configuration.</li>" +
+      "<li>Firewall and access-control settings.</li>" +
+      "<li>Common exposure risks.</li>" +
+      "<li>Secure communication practices.</li>" +
+      "<li>Basic network protection controls.</li>" +
+      "</ul>" +
+      "<div class='info-note'>Network testing should only be performed with authorization from the network owner.</div>"
+  },
+
+
+  account: {
+    title: "Account Security",
+    content:
+      "<h3>How can account security help?</h3>" +
+      "<p>Account security guidance helps reduce the risk of unauthorized access to online accounts.</p>" +
+      "<h3>Common protection steps include:</h3>" +
+      "<ul>" +
+      "<li>Use strong and unique passwords.</li>" +
+      "<li>Enable multi-factor authentication.</li>" +
+      "<li>Review active sessions and devices.</li>" +
+      "<li>Check account recovery options.</li>" +
+      "<li>Recognize suspicious login activity.</li>" +
+      "</ul>" +
+      "<div class='info-note'>Never share passwords, OTPs or recovery codes with anyone.</div>"
+  },
+
+
+  phishing: {
+    title: "Phishing & Scam Analysis",
+    content:
+      "<h3>What is phishing?</h3>" +
+      "<p>Phishing attempts often use fake messages, links or websites to trick people into revealing information or taking unsafe actions.</p>" +
+      "<h3>What can be reviewed?</h3>" +
+      "<ul>" +
+      "<li>Suspicious emails and messages.</li>" +
+      "<li>Unexpected links.</li>" +
+      "<li>Fake login pages.</li>" +
+      "<li>Suspicious website indicators.</li>" +
+      "<li>Common scam patterns.</li>" +
+      "</ul>" +
+      "<div class='info-note'>Do not provide passwords, OTPs or financial information while investigating a suspicious message.</div>"
+  },
+
+
+  malware: {
+    title: "Malware & Virus Guidance",
+    content:
+      "<h3>What is malware?</h3>" +
+      "<p>Malware is software designed to perform unwanted or harmful actions on a device or system.</p>" +
+      "<h3>Guidance can include:</h3>" +
+      "<ul>" +
+      "<li>Recognizing suspicious software.</li>" +
+      "<li>Reviewing unusual device behavior.</li>" +
+      "<li>Keeping operating systems updated.</li>" +
+      "<li>Using trusted security software.</li>" +
+      "<li>Improving basic device protection.</li>" +
+      "</ul>" +
+      "<div class='info-note'>Do not install unknown software or follow instructions from untrusted sources.</div>"
+  },
+
+
+  privacy: {
+    title: "Privacy Protection",
+    content:
+      "<h3>Why does privacy protection matter?</h3>" +
+      "<p>Privacy protection helps reduce unnecessary exposure of personal information across websites, apps and online accounts.</p>" +
+      "<h3>Useful privacy practices include:</h3>" +
+      "<ul>" +
+      "<li>Review app permissions.</li>" +
+      "<li>Check account privacy settings.</li>" +
+      "<li>Limit unnecessary personal information sharing.</li>" +
+      "<li>Use secure authentication methods.</li>" +
+      "<li>Review connected applications regularly.</li>" +
+      "</ul>" +
+      "<div class='info-note'>Avoid sharing sensitive personal information unless it is genuinely required.</div>"
+  },
+
+
+  social: {
+    title: "Social Media Security",
+    content:
+      "<h3>How can social media security help?</h3>" +
+      "<p>Social media security focuses on protecting accounts from unauthorized access, impersonation and suspicious activity.</p>" +
+      "<h3>Protection can include:</h3>" +
+      "<ul>" +
+      "<li>Enabling multi-factor authentication.</li>" +
+      "<li>Reviewing logged-in devices.</li>" +
+      "<li>Checking privacy settings.</li>" +
+      "<li>Securing recovery information.</li>" +
+      "<li>Recognizing fake profiles and phishing attempts.</li>" +
+      "</ul>" +
+      "<div class='info-note'>Never share social media passwords, OTPs or recovery codes.</div>"
+  },
+
+
+  data: {
+    title: "Data Protection",
+    content:
+      "<h3>What is data protection?</h3>" +
+      "<p>Data protection focuses on reducing unauthorized access, accidental exposure and loss of important information.</p>" +
+      "<h3>Protection practices include:</h3>" +
+      "<ul>" +
+      "<li>Use appropriate access controls.</li>" +
+      "<li>Keep important software updated.</li>" +
+      "<li>Maintain secure backups.</li>" +
+      "<li>Protect sensitive files.</li>" +
+      "<li>Review who can access important information.</li>" +
+      "</ul>" +
+      "<div class='info-note'>Sensitive information should only be shared with trusted and authorized parties.</div>"
   }
+
 };
 
 
 document.querySelectorAll(".service-card").forEach(function (card) {
+
   card.addEventListener("click", function () {
 
     const serviceKey = card.dataset.info;
     const service = serviceContent[serviceKey];
 
-    if (!service) {
-      return;
-    }
+    if (!service) return;
 
     const infoSection = document.querySelector("#service-info");
     const title = document.querySelector("#info-title");
     const content = document.querySelector("#info-content");
 
-    if (!infoSection || !title || !content) {
-      return;
-    }
+    if (!infoSection || !title || !content) return;
 
     title.textContent = service.title;
     content.innerHTML = service.content;
@@ -157,13 +287,18 @@ document.querySelectorAll(".service-card").forEach(function (card) {
       behavior: "smooth",
       block: "start"
     });
+
   });
+
 });
+
+
 /* ===== CYBER MOUSE GLOW ===== */
 
 const cyberWallpaper = document.querySelector(".cyber-wallpaper");
 
 if (cyberWallpaper) {
+
   document.addEventListener("mousemove", function (e) {
 
     const x = (e.clientX / window.innerWidth) * 100;
@@ -173,4 +308,6 @@ if (cyberWallpaper) {
     cyberWallpaper.style.setProperty("--mouse-y", y + "%");
 
   });
+
 }
+
